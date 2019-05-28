@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,6 +14,7 @@ import lombok.Setter;
 @Table
 @NoArgsConstructor
 @Getter @Setter
+@Data
 public class Item {
 
     @Id
@@ -21,6 +23,7 @@ public class Item {
 
     private String name;
     private String url;
+
 
     public Item(String name, String url) {
         this.name = name;

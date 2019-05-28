@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ItemService {
-  public API = "//localhost:8080"
+  public API = "//localhost:8081"
   public ITEM_API = this.API + '/items'
   constructor(private http: HttpClient) { }
 
   getAllItem(): Observable<any> {
-    return this.http.get('//localhost:8080/items')
+    return this.http.get('//localhost:8081/items')
   }
 
   getItem(id: string) {
