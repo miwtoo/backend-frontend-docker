@@ -1,19 +1,4 @@
-# Angular + Spring Boot CRUD
+# Docker Angular Deploy
 
-## Initial Project
-```
-$ git clone https://github.com/infinityc2/Angular-SpringBoot-BASIC-CRUD.git
-$ npm install
-```
-
-## Backend Serve
-```
-cd server
-mvn spring-boot:run
-```
-
-## Frontend Serve
-```
-cd client
-ng serve --open
-```
+# Config
+add `172.21.0.1 backend` in `/etc/hosts`

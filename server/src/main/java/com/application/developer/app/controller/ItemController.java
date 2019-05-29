@@ -14,13 +14,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class ItemController {
 
     @Autowired private ItemRepository itemRepository;
 
     @GetMapping("/items")
     public Collection<Item> getAllItems() {
+        System.out.println("get all");
         return itemRepository.findAll();
     }
 
@@ -29,6 +30,7 @@ public class ItemController {
         Item item = new Item();
         item.setName(body.get("name").toString());
         item.setUrl(body.get("url").toString());
+        System.out.println(item);
         return itemRepository.save(item);
     }
     

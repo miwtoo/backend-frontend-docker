@@ -12,9 +12,15 @@ export class ItemListComponent implements OnInit {
   constructor(private itemService: ItemService) { }
 
   ngOnInit() {
-    this.itemService.getAllItem().subscribe(data => {
-      this.items = data
-    })
+    this.itemService.getAllItem().subscribe(
+      data => {
+        console.log("GET Request is successful ", data);
+        this.items = data
+      },
+      error => {
+        console.log("Error", error);
+      }
+    )
   }
 
 }
